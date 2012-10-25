@@ -1,0 +1,125 @@
+##### Package Import and Page definition
+#+LaTeX_HEADER:\documentclass[10pt]{article}
+#+LaTeX_HEADER:\usepackage[vmargin=2.5cm,lmargin=1.85cm,rmargin=1.5cm]{geometry}
+#+LaTeX_HEADER:\geometry{letterpaper}
+#+LaTeX_HEADER:\sffamily
+#+LaTeX_HEADER:% font attempt
+#+LaTeX_HEADER:\renewcommand{\familydefault}{\sfdefault}
+#+LaTeX_HEADER:\usepackage{fancyhdr}
+#+LaTeX_HEADER:\usepackage[dvipsnames,usenames]{color}
+#+LaTeX_HEADER:\usepackage{subfig}
+#+LaTeX_HEADER:\usepackage{listings}
+#+LaTeX_HEADER:\usepackage[T1]{fontenc}
+#+LaTeX_HEADER:\usepackage[scaled]{helvet}
+#+LaTeX_HEADER:\pagestyle{fancy}
+#+LaTeX_HEADER:\usepackage[utf8]{inputenc}
+#+LaTeX_HEADER:\usepackage[T1]{fontenc}
+#+LaTeX_HEADER:\usepackage{fixltx2e}
+#+LaTeX_HEADER:\usepackage{graphicx}
+#+LaTeX_HEADER:\usepackage{longtable}
+#+LaTeX_HEADER:\usepackage{float}
+#+LaTeX_HEADER:\usepackage{wrapfig}
+#+LaTeX_HEADER:\usepackage{soul}
+#+LaTeX_HEADER:\usepackage{textcomp}
+#+LaTeX_HEADER:\usepackage{marvosym}
+#+LaTeX_HEADER:\usepackage{wasysym}
+#+LaTeX_HEADER:\usepackage{latexsym}
+#+LaTeX_HEADER:\usepackage{amssymb}
+#+LaTeX_HEADER:\usepackage{hyperref}
+#+LaTeX_HEADER:\tolerance=1000
+#+LaTeX_HEADER:\providecommand{\alert}[1]{\textbf{#1}}
+#+LaTeX_HEADER:\renewcommand{\familydefault}{\sfdefault}
+#+LaTeX_HEADER:\setlength{\headheight}{15.2pt}
+#+LaTeX_HEADER:\setlength{\headsep}{20pt}
+#+LaTeX_HEADER:\setlength{\parindent}{0cm}
+#+LaTeX_HEADER:% for header/footer 
+#+LaTeX_HEADER:\lhead{\bfseries Title}
+#+LaTeX_HEADER:\pagestyle{fancy}
+#####
+
+#+LaTeX_HEADER:\begin{document}
+
+#+Title:Title
+
+#+Author:D. Hoogestraat
+
+####Following lines suppress the org-mode title page and toc
+#+OPTIONS:toc:nil
+#+BIND: org-export-latex-title-command ""
+####
+
+##### removes header from first page
+#+LaTeX:\thispagestyle{empty}
+#+LaTeX:%\changepage{}{}{}{}{}{}{-5em}{}{}
+#####
+
+#####Box formatting for standardization with other micro procedures
+#+LaTeX:\begin{alltt}
+#+LaTeX:\normalfont
+#+LaTeX:\textbf{University of Washington Medical Center}
+
+### Adjust this for new procedure number
+#+LaTeX:Clinical Microbiology Laboratory Document\# 609.U.nnn.nn
+###
+
+#+LaTeX:\end{alltt}
+#+LaTeX:\begin{center}
+#+LaTeX:    \begin{tabular}{|p{5cm}|p{5cm}|p{5cm}|}
+#+LaTeX:    \hline
+
+### Adjust title and active date here
+#+LaTeX:    \multicolumn{2}{|p{10cm}|}{Molecular Diagnosis Manual\newline \bfseries Title} & Effective: [DATE] \\  
+###
+
+#+LaTeX:    \hline
+#+LaTeX:    Written by: D. Hoogestraat & Reviewed by: Dhruba Sengupta & Approved by:  \\
+#+LaTeX:    \hline
+#+LaTeX:    \multicolumn{2}{|p{10cm}|} {} & \\
+#+LaTeX:    \hline
+#+LaTeX:    \end{tabular}
+#+LaTeX:\end{center}
+
+#+LaTeX:\begin{center}
+#+LaTeX:    \begin{tabular}{|p{3.75cm}|p{3.75cm}|p{3.75cm}|p{3.75cm}|}
+#+LaTeX:    \hline
+#+LaTeX:    \multicolumn{4}{|p{15cm}|}{\bfseries ANNUAL REVIEW} \\
+#+LaTeX:    \hline
+#+LaTeX:    \bfseries Reviewed By: & \bfseries Date: & \bfseries Reviewed By: & \bfseries Date: \\
+#+LaTeX:    \hline
+#+LaTeX:     & & & \\
+#+LaTeX:    \hline
+#+LaTeX:    \end{tabular}
+#+LaTeX:\end{center}
+#####
+
+##### Manual TOC addition
+#+LaTeX:\setcounter{tocdepth}{2}
+#+LaTeX:\tableofcontents
+#+LaTeX:\vspace*{1cm}
+#####
+
+##################################################################################
+#This is an org-mode micro procedure file, add content following this region
+#
+#Don't forget to change titles, dates, procedure number where indicated above
+#
+#To compile as PDF, use C-c C-e p
+#
+#Example org syntax:
+#
+#*Header
+#**Sub-header
+#
+#1. Enumerated list
+#1. [4@] Enumerated list beginning at 4
+#
+#Include Figures
+# #+LaTeX:\begin{centering}
+# #+LaTeX:\includegraphics[width=18cm]{./figs/fig2.png}
+# #+LaTeX:\end{centering}
+#
+#
+#Most org-mode syntax compiles OK
+#See [[http://orgmode.org/worg/org-tutorials/org-latex-export.html for more info]]
+##################################################################################
+###Start content below
