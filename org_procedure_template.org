@@ -1,4 +1,4 @@
-##### Package Import and Page definition
+# Package Import and Page definition
 #+LaTeX_HEADER:\documentclass[10pt]{article}
 #+LaTeX_HEADER:\usepackage[vmargin=2.5cm,lmargin=1.85cm,rmargin=1.5cm]{geometry}
 #+LaTeX_HEADER:\geometry{letterpaper}
@@ -35,7 +35,7 @@
 #+LaTeX_HEADER:% for header/footer 
 #+LaTeX_HEADER:\lhead{\bfseries Title}
 #+LaTeX_HEADER:\pagestyle{fancy}
-#####
+# ####
 
 #+LaTeX_HEADER:\begin{document}
 
@@ -43,33 +43,33 @@
 
 #+Author:D. Hoogestraat
 
-####Following lines suppress the org-mode title page and toc
+# ###Following lines suppress the org-mode title page and toc
 #+OPTIONS:toc:nil
 #+BIND: org-export-latex-title-command ""
-####
+# ###
 
-##### removes header from first page
+# #### removes header from first page
 #+LaTeX:\thispagestyle{empty}
 #+LaTeX:%\changepage{}{}{}{}{}{}{-5em}{}{}
-#####
+# ####
 
-#####Box formatting for standardization with other micro procedures
+# ####Box formatting for standardization with other micro procedures
 #+LaTeX:\begin{alltt}
 #+LaTeX:\normalfont
 #+LaTeX:\textbf{University of Washington Medical Center}
 
-### Adjust this for new procedure number
+# ## Adjust this for new procedure number
 #+LaTeX:Clinical Microbiology Laboratory Document\# 609.U.nnn.nn
-###
+# ##
 
 #+LaTeX:\end{alltt}
 #+LaTeX:\begin{center}
 #+LaTeX:    \begin{tabular}{|p{5cm}|p{5cm}|p{5cm}|}
 #+LaTeX:    \hline
 
-### Adjust title and active date here
+# ## Adjust title and active date here
 #+LaTeX:    \multicolumn{2}{|p{10cm}|}{Molecular Diagnosis Manual\newline \bfseries Title} & Effective: [DATE] \\  
-###
+# ##
 
 #+LaTeX:    \hline
 #+LaTeX:    Written by: D. Hoogestraat & Reviewed by: Dhruba Sengupta & Approved by:  \\
@@ -90,36 +90,36 @@
 #+LaTeX:    \hline
 #+LaTeX:    \end{tabular}
 #+LaTeX:\end{center}
-#####
+# ####
 
-##### Manual TOC addition
+# #### Manual TOC addition
 #+LaTeX:\setcounter{tocdepth}{2}
 #+LaTeX:\tableofcontents
 #+LaTeX:\vspace*{1cm}
-#####
+# ####
 
-##################################################################################
-#This is an org-mode micro procedure file, add content following this region
+# #################################################################################
+# This is an org-mode micro procedure file, add content following this region
 #
-#Don't forget to change titles, dates, procedure number where indicated above
+# Don't forget to change titles, dates, procedure number where indicated above
 #
-#To compile as PDF, use C-c C-e p
+# To compile as PDF, use C-c C-e p
 #
-#Example org syntax:
+# Example org syntax:
 #
-#*Header
-#**Sub-header
+# *Header
+# **Sub-header
 #
-#1. Enumerated list
-#1. [4@] Enumerated list beginning at 4
+# 1. Enumerated list
+# 1. [4@] Enumerated list beginning at 4
 #
-#Include Figures
+# Include Figures
 # #+LaTeX:\begin{centering}
 # #+LaTeX:\includegraphics[width=18cm]{./figs/fig2.png}
 # #+LaTeX:\end{centering}
 #
 #
-#Most org-mode syntax compiles OK
-#See [[http://orgmode.org/worg/org-tutorials/org-latex-export.html for more info]]
-##################################################################################
-###Start content below
+# Most org-mode syntax compiles OK
+# See [[http://orgmode.org/worg/org-tutorials/org-latex-export.html for more info]]
+# #################################################################################
+# ##Start content below
